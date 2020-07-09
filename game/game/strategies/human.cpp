@@ -16,6 +16,9 @@ void human_strategy_t::on_win() {
 void human_strategy_t::on_lose() {
   std::cout << "You lose!" << std::endl;
 }
+void human_strategy_t::on_tie() {
+  std::cout << "Tie!" << std::endl;
+}
 
 step_t human_strategy_t::make_step(const field_t &fld, size_t player_num) {
   std::cout << "Field:" << std::endl;

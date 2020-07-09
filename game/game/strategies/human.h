@@ -19,4 +19,5 @@ public:
 
   void on_win() override;
   void on_lose() override;
+    void on_tie() override;
 };

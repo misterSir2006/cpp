@@ -25,7 +25,8 @@ public:
     enum step_outcome_t {
         FINISHED,
         CONTINUES,
-        ERROR
+        ERROR,
+        TIE
     };
  
 
@@ -40,10 +41,10 @@ private:
     step_outcome_t apply_step(const step_t &step, size_t player_num);
     std::pair<int, int> coordOfBitedChip(const step_t &step);
     
-    bool checkAnotherStep(const step_t &step, size_t player_num);
     bool confirmAnotherStep(std::string pos, std::string doublePos, size_t player_num);
     bool checkDiagonals(const step_t &step, size_t player_num);
     bool checkWay(const step_t &step);
+    bool checkTie(size_t player_num);
     
     void clearWay(const step_t &step, size_t player_num);
     

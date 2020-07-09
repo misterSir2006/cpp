@@ -12,6 +12,7 @@
 		CF0D728724A8F04700806CD6 /* computer_interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF0D728624A8F04700806CD6 /* computer_interface.cpp */; };
 		CF0D728924A8F06600806CD6 /* computer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF0D728824A8F06600806CD6 /* computer.cpp */; };
 		CF0D728B24A8F08300806CD6 /* human.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF0D728A24A8F08300806CD6 /* human.cpp */; };
+		CFA0CFB824B6FD3500A8CDCE /* secondComputer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFA0CFB624B6FD3500A8CDCE /* secondComputer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		CF0D728624A8F04700806CD6 /* computer_interface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = computer_interface.cpp; sourceTree = "<group>"; };
 		CF0D728824A8F06600806CD6 /* computer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = computer.cpp; sourceTree = "<group>"; };
 		CF0D728A24A8F08300806CD6 /* human.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = human.cpp; sourceTree = "<group>"; };
+		CFA0CFB624B6FD3500A8CDCE /* secondComputer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = secondComputer.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				CF0D728524A8F02300806CD6 /* interface.h */,
 				CF0D728624A8F04700806CD6 /* computer_interface.cpp */,
 				CF0D728824A8F06600806CD6 /* computer.cpp */,
+				CFA0CFB624B6FD3500A8CDCE /* secondComputer.cpp */,
 				CF0D728A24A8F08300806CD6 /* human.cpp */,
 			);
 			path = strategies;
@@ -163,6 +166,7 @@
 				CF0D727624A8EEBE00806CD6 /* main.cpp in Sources */,
 				CF0D728B24A8F08300806CD6 /* human.cpp in Sources */,
 				CF0D728024A8EF5900806CD6 /* game.cpp in Sources */,
+				CFA0CFB824B6FD3500A8CDCE /* secondComputer.cpp in Sources */,
 				CF0D728724A8F04700806CD6 /* computer_interface.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

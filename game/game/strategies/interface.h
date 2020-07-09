@@ -17,4 +17,5 @@ public:
 
   virtual void on_lose() = 0;
   virtual void on_win() = 0;
+    virtual void on_tie() = 0;
 };

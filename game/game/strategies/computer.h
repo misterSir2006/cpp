@@ -13,13 +13,28 @@
 #include "../game/structures.h"
 #include "computer_interface.h"
 
-class computer_strategy_t : public computer_interface_t {
+class StupidComputerStrategy : public computer_interface_t {
 public:
-  explicit computer_strategy_t(std::string name);
+  explicit StupidComputerStrategy(std::string name);
   step_t make_step(const field_t &field, size_t player_num) override;
 
   void print_stat() const override;
 
 private:
+    step_t check(const field_t &fld, std::pair<int, int> chip, size_t player_num);
+  std::string name;
+};
+
+
+class SmartComputerStrategy : public computer_interface_t {
+public:
+  explicit SmartComputerStrategy(std::string name);
+  step_t make_step(const field_t &field, size_t player_num) override;
+
+  void print_stat() const override;
+
+private:
+    step_t checkKill(const field_t &fld, size_t player_num);
+    step_t check(const field_t &fld, std::pair<int, int> chip, size_t player_num);
   std::string name;
 };
