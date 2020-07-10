@@ -40,11 +40,11 @@ int main() {
       player3->print_stat();
       player4->print_stat();
 
-    //uncomment it to test the human_strategy
-//    auto player5 = std::make_shared<human_strategy_t>();
-//    auto player6 = std::make_shared<SmartComputerStrategy>("First player");
-//    game_t game(player5, player6);
-//    game.play();
+    
+    auto player5 = std::make_shared<human_strategy_t>();
+    auto player6 = std::make_shared<SmartComputerStrategy>("First player");
+    game_t game(player5, player6);
+    game.play();
 
   return 0;
 }

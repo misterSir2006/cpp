@@ -22,23 +22,53 @@ void human_strategy_t::on_tie() {
 
 step_t human_strategy_t::make_step(const field_t &fld, size_t player_num) {
   std::cout << "Field:" << std::endl;
+    
+    std::cout << "  ";
+    for (int i = 0; i < 8; i++) {
+        std::cout << char(65 + i);
+        std::cout << " ";
+    }
+    std::cout << std::endl;
+    
+    int i = 1;
   for (const auto &line : fld.fld) {
-    for (std::string c : line) {
-      std::cout << c;
+      std::cout << i << " ";
+      i++;
+      for (std::string c : line) {
+          if (c == "○") {
+              std::cout << "W";
+          } else if (c == "●") {
+              std::cout << "B";
+          } else {
+              std::cout << c;
+          }
+      std::cout << " ";
     }
     std::cout << std::endl;
   }
     
   std::cout << "Player " << player_num << std::endl;
   std::cout << "Enter the coordinates of your chip, which you are going to make a move: " << std::endl;
-  int xOfChip, yOfChip;
-  std::cin >> xOfChip >> yOfChip;
+    
+    std::string chip;
+  std::cin >> chip;
+    if (chip.length() != 2) {
+        return {20, 20, 20, 20};
+    }
+    int xOfChip = chip[0];
+    int yOfChip = chip[1];
     
   std::cout << "Enter the coordinates where you want to move the chip: " << std::endl;
-  int xOfStep, yOfStep;
-  std::cin >> xOfStep >> yOfStep;
     
-  return {xOfChip, 9 - yOfChip, xOfStep, 9 - yOfStep};
+    std::string step;
+  std::cin >> step;
+    if (step.length() != 2) {
+        return {20, 20, 20, 20};
+    }
+    int xOfStep = step[0];
+    int yOfStep = step[1];
+    
+    return {int(xOfChip) - 64, int(yOfChip) - 48, int(xOfStep) - 64, int(yOfStep) - 48};
 }
 
 void human_strategy_t::on_incorrect_step(const step_t &step) const {
